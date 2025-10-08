@@ -107,6 +107,7 @@
      animation: fadeIn 1.4s ease-in;
  }
 
+
  .grid {
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -324,3 +325,4 @@ nav {
      color: #fff;
 
  }
+
