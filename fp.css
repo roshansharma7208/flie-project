@@ -1,0 +1,323 @@
+ /* Resetting basic styles */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: 'Segoe UI', Arial, sans-serif;
+     background-color: #f5f7ff;
+     color: #222;
+     line-height: 1.7;
+     transition: background-color 0.3s ease, color 0.3s ease;
+ }
+
+ /* Header with gradient background and shorter height */
+ header {
+     background: linear-gradient(120deg, #6a11cb, #2575fc);
+     color: white;
+     text-align: center;
+     padding: 50px 20px;
+     /* reduced height */
+ }
+
+ header h1 {
+     font-size: 3.2rem;
+     margin-bottom: 10px;
+     animation: floatIn 3s ease-in-out infinite;
+ }
+
+ header p {
+     font-size: 1.3rem;
+     opacity: 0.95;
+ }
+
+ /* Sticky navigation bar */
+ nav {
+     background-color: #222;
+     text-align: center;
+     padding: 15px 0;
+     position: sticky;
+     top: 0;
+     z-index: 100;
+ }
+
+ nav a {
+     color: white;
+     text-decoration: none;
+     padding: 12px 20px;
+     font-weight: 600;
+     display: inline-block;
+     transition: background-color 0.3s ease, transform 0.2s ease;
+ }
+
+ nav a:hover {
+     background-color: #444;
+     transform: translateY(-2px);
+     border-radius: 6px;
+ }
+
+ /* Dark mode toggle button */
+ #themeToggle {
+     background-color: #444;
+     color: white;
+     border: none;
+     margin-left: 10px;
+     padding: 10px 15px;
+     font-weight: bold;
+     border-radius: 6px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+ }
+
+ #themeToggle:hover {
+     background-color: #666;
+ }
+
+ section {
+     max-width: 1100px;
+     margin: 70px auto;
+     padding: 40px;
+     background-color: white;
+     border-radius: 15px;
+     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+     animation: fadeInUp 1s ease forwards;
+     opacity: 0;
+ }
+
+ section h2 {
+     color: #2575fc;
+     font-size: 2.2rem;
+     text-align: center;
+     margin-bottom: 25px;
+ }
+
+ section p,
+ section ul {
+     font-size: 1.1rem;
+     text-align: justify;
+     margin-bottom: 15px;
+ }
+
+ img {
+     width: 100%;
+     border-radius: 12px;
+     margin: 20px 0;
+     animation: fadeIn 1.4s ease-in;
+ }
+
+ .grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+     gap: 25px;
+ }
+
+ .card {
+     background-color: #f4f6ff;
+     border-left: 6px solid #2575fc;
+     border-radius: 12px;
+     padding: 25px;
+     animation: fadeInUp 0.8s ease forwards;
+     opacity: 0;
+     transition: transform 0.3s ease, background-color 0.3s ease;
+ }
+
+ .card:hover {
+     background-color: #e7efff;
+     transform: scale(1.03);
+ }
+
+ ul {
+     padding-left: 20px;
+ }
+
+ ul li {
+     margin-bottom: 10px;
+ }
+
+ .highlight,
+ .danger,
+ .quote {
+     padding: 20px;
+     border-radius: 10px;
+     margin-top: 20px;
+ }
+
+ .highlight {
+     background-color: #e3fcef;
+     border-left: 6px solid #2ecc71;
+ }
+
+ .danger {
+     background-color: #fdecea;
+     border-left: 6px solid #e74c3c;
+ }
+
+ .quote {
+     background-color: #eef1ff;
+     border-left: 6px solid #6a11cb;
+     font-style: italic;
+ }
+
+ footer {
+     text-align: center;
+     background-color: #222;
+     color: white;
+     padding: 30px 10px;
+     font-size: 1.1rem;
+     margin-top: 70px;
+ }
+
+ footer span {
+     color: #00d4ff;
+ }
+
+ /* Animation keyframes */
+ @keyframes fadeInUp {
+     from {
+         opacity: 0;
+         transform: translateY(40px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ @keyframes floatIn {
+
+     0%,
+     100% {
+         transform: translateY(0);
+     }
+
+     50% {
+         transform: translateY(-8px);
+     }
+ }
+
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1;
+     }
+ }
+
+ /* Section animation delays */
+ #intro {
+     animation-delay: 0.2s;
+ }
+
+ #benefits {
+     animation-delay: 0.4s;
+ }
+
+ #addiction {
+     animation-delay: 0.6s;
+ }
+
+ #tips {
+     animation-delay: 0.8s;
+ }
+
+ #survey {
+     animation-delay: 1s;
+ }
+
+ #conclusion {
+     animation-delay: 1.2s;
+ }
+
+ .card:nth-child(1) {
+     animation-delay: 0.2s;
+ }
+
+ .card:nth-child(2) {
+     animation-delay: 0.4s;
+ }
+
+ .card:nth-child(3) {
+     animation-delay: 0.6s;
+ }
+
+ @media (max-width: 700px) {
+     header h1 {
+         font-size: 2.2rem;
+     }
+
+     section {
+         padding: 25px;
+     }
+ }
+
+ /* ============================= */
+ /*         DARK MODE CSS         */
+ /* ============================= */
+ body.dark-mode {
+     background-color: #121212;
+     color: #e0e0e0;
+ }
+
+ body.dark-mode header {
+     background: linear-gradient(120deg, #333, #222);
+ }
+
+ body.dark-mode nav {
+     background-color: #111;
+ }
+
+ body.dark-mode nav a {
+     color: #e0e0e0;
+ }
+
+ body.dark-mode nav a:hover {
+     background-color: #333;
+ }
+
+ body.dark-mode section {
+     background-color: #1e1e1e;
+     box-shadow: 0 6px 25px rgba(255, 255, 255, 0.05);
+ }
+
+ body.dark-mode .card {
+     background-color: #2a2a2a;
+     border-left-color: #6a11cb;
+ }
+
+ body.dark-mode .card:hover {
+     background-color: #333;
+ }
+
+ body.dark-mode .highlight {
+     background-color: #193c30;
+     border-left-color: #27ae60;
+ }
+
+ body.dark-mode .danger {
+     background-color: #4a1c1a;
+     border-left-color: #e74c3c;
+ }
+
+ body.dark-mode .quote {
+     background-color: #2e2e44;
+     border-left-color: #6a11cb;
+ }
+
+ body.dark-mode footer {
+     background-color: #111;
+     color: #ccc;
+ }
+
+ body.dark-mode footer span {
+     color: #00d4ff;
+ }
+
+ body.dark-mode #themeToggle {
+     background-color: #333;
+     color: #fff;
+ }
