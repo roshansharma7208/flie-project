@@ -101,14 +101,11 @@
  }
 
  img {
-     width: 100%;
+     width: 50%;
      border-radius: 12px;
      margin: 20px 0;
      animation: fadeIn 1.4s ease-in;
  }
-#imag3{
- width: 50%;
-}
 
  .grid {
      display: grid;
@@ -327,5 +324,6 @@ nav {
      color: #fff;
 
  }
+
 
 
