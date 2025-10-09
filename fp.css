@@ -101,11 +101,12 @@
  }
 
  img {
-     width: 50%;
-     border-radius: 12px;
-     margin: 20px 0;
-     animation: fadeIn 1.4s ease-in;
- }
+    display: block;
+    margin: 20px auto; /* Top/bottom = 20px, left/right = auto (centers it) */
+    width: 50%;
+    border-radius: 12px;
+    animation: fadeIn 1.4s ease-in;
+}
 
  .grid {
      display: grid;
@@ -324,6 +325,3 @@ nav {
      color: #fff;
 
  }
-
-
-
